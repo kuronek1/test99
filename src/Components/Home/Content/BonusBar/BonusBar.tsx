@@ -1,25 +1,17 @@
-import { ReactNode, useState } from 'react';
+import React, { useState } from 'react';
 import './styles.less';
 import { Button, Flex, Radio, Typography } from 'antd';
-import { ReactComponent as IconButton1 } from '../../../../static/svg/bonus_button.svg';
-import { ReactComponent as IconButton2 } from '../../../../static/svg/bonus_button2.svg';
-import { ReactComponent as IconButton3 } from '../../../../static/svg/bonus_button3.svg';
-import iconCase1 from '../../../../static/images/case1.png';
-import iconCase2 from '../../../../static/images/case2.png';
-import iconCase3 from '../../../../static/images/case3.png';
-
-import React from 'react';
 import { CaretDownFilled } from '@ant-design/icons';
+import { IBonusItem } from 'constants/types';
 
-interface BonusItem {
-	id: number;
-	image: string;
-	backgroundImage: ReactNode;
-	label: string;
-	description: string;
-}
+import { ReactComponent as IconButton1 } from 'static/svg/bonus_button.svg';
+import { ReactComponent as IconButton2 } from 'static/svg/bonus_button2.svg';
+import { ReactComponent as IconButton3 } from 'static/svg/bonus_button3.svg';
+import iconCase1 from 'static/images/case1.png';
+import iconCase2 from 'static/images/case2.png';
+import iconCase3 from 'static/images/case3.png';
 
-const bonusItems: BonusItem[] = [
+const bonusItems: IBonusItem[] = [
 	{
 		id: 1,
 		image: iconCase1,
@@ -50,16 +42,16 @@ interface IProps {
 
 const BonusBar: React.FC<IProps> = props => {
 	const { isOpen, handleToggle } = props;
-	const [selectedBonus, setSelectedBonus] = useState<BonusItem[]>([bonusItems[0]]);
+	const [selectedBonus, setSelectedBonus] = useState<IBonusItem[]>([bonusItems[0]]);
 
-	const handleSelect = (item: BonusItem) => {
+	const handleSelect = (item: IBonusItem) => {
 		setSelectedBonus([item]);
 		handleToggle();
 	};
 
 	return (
 		<Radio.Group className={`bonusBarWrapper ${isOpen && 'bonusBarWrapperOpen'}`}>
-			{(isOpen ? bonusItems : selectedBonus).map((item: BonusItem) => (
+			{(isOpen ? bonusItems : selectedBonus).map((item: IBonusItem) => (
 				<Flex key={item.id} className='bonusBarItem'>
 					{item.backgroundImage}
 					<Flex className='bonusBarItemWrapper'>

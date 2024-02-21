@@ -5,69 +5,17 @@ import { Content } from 'antd/es/layout/layout';
 import NavBarButton from './NavBarButton';
 import RecentItem from './RecentItem';
 import BonusBar from './BonusBar';
+import { winnersData, countriesData, currencyData } from 'constants/data';
+import { IWinnerItem } from 'constants/types';
 
-import { ReactComponent as IconFire } from '../../../static/svg/fire1.svg';
-import { ReactComponent as IconSkull } from '../../../static/svg/skull.svg';
-import { ReactComponent as IconGirl } from '../../../static/svg/girl_casino.svg';
-import { ReactComponent as IconSubtract } from '../../../static/svg/subtract.svg';
-import { ReactComponent as IconShield } from '../../../static/svg/shield.svg';
-import { ReactComponent as IconFlag } from '../../../static/svg/flag.svg';
-import { ReactComponent as IconWave1 } from '../../../static/svg/wave1.svg';
-import iconEgypt from '../../../static/images/sun_of_egypt.png';
-
+import { ReactComponent as IconFire } from 'static/svg/fire1.svg';
+import { ReactComponent as IconSkull } from 'static/svg/skull.svg';
+import { ReactComponent as IconGirl } from 'static/svg/girl_casino.svg';
+import { ReactComponent as IconSubtract } from 'static/svg/subtract.svg';
+import { ReactComponent as IconShield } from 'static/svg/shield.svg';
+import { ReactComponent as IconFlag } from 'static/svg/flag.svg';
+import { ReactComponent as IconWave1 } from 'static/svg/wave1.svg';
 import './content.less';
-
-const winners = [
-	{
-		id: 1,
-		name: 'Robert',
-		place: 'Sun of Egypt',
-		amount: 19.7,
-		image: iconEgypt
-	},
-	{
-		id: 2,
-		name: 'David',
-		place: 'Moon Walk',
-		amount: 119.74,
-		image: iconEgypt
-	},
-	{
-		id: 3,
-		name: 'Ben',
-		place: 'Sun of Egypt',
-		amount: 19.72,
-		image: iconEgypt
-	},
-	{
-		id: 4,
-		name: 'Olivia',
-		place: 'Moon Walk',
-		amount: 9.7,
-		image: iconEgypt
-	},
-	{
-		id: 5,
-		name: 'Robert',
-		place: 'Sun of Egypt',
-		amount: 199.7,
-		image: iconEgypt
-	},
-	{
-		id: 6,
-		name: 'Ben',
-		place: 'Moon Walk',
-		amount: 139.7,
-		image: iconEgypt
-	},
-	{
-		id: 7,
-		name: 'Olivia',
-		place: 'Sun of Egypt',
-		amount: 219.7,
-		image: iconEgypt
-	}
-];
 
 const LayoutContent: React.FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -92,22 +40,12 @@ const LayoutContent: React.FC = () => {
 									<Select
 										defaultValue='Country'
 										className='contentSelect'
-										options={[
-											{ value: 'USA', label: 'USA' },
-											{ value: 'Ukraine', label: 'Ukraine' },
-											{ value: 'German', label: 'German' },
-											{ value: 'France', label: 'France' }
-										]}
+										options={countriesData}
 									/>
 									<Select
 										defaultValue='Currency'
 										className='contentSelect'
-										options={[
-											{ value: 'USD', label: 'US Dollar' },
-											{ value: 'GRN', label: 'Ukrainian hryvnia' },
-											{ value: 'EUR', label: 'Euro' },
-											{ value: 'GBP', label: ' Pound Sterling' }
-										]}
+										options={currencyData}
 									/>
 								</Flex>
 								<div className='contentButtonSubmitWrapper' onClick={() => console.log('start')}>
@@ -141,7 +79,7 @@ const LayoutContent: React.FC = () => {
 							</Typography>
 						</div>
 						<Marquee>
-							{winners.map(item => (
+							{winnersData.map((item: IWinnerItem) => (
 								<RecentItem
 									key={item.id}
 									name={item.name}

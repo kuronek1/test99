@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { Badge, Button, Flex, Typography } from 'antd';
-import { ReactComponent as IconNavBarFire } from '../../../../static/svg/navbar_fire.svg';
-import { ReactComponent as IconNavBarFire1 } from '../../../../static/svg/navbar_fire1.svg';
+import { ReactComponent as IconNavBarFire } from 'static/svg/navbar_fire.svg';
+import { ReactComponent as IconNavBarFire1 } from 'static/svg/navbar_fire1.svg';
 import './styles.less';
 
 interface IProps {

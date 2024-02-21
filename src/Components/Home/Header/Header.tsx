@@ -2,11 +2,11 @@ import React from 'react';
 import { Badge, Button, Flex, Select } from 'antd';
 import { Header } from 'antd/es/layout/layout';
 
-import { ReactComponent as IconLogo } from '../../../static/svg/logo.svg';
-import { ReactComponent as IconSearch } from '../../../static/svg/search.svg';
-import { ReactComponent as IconSubtract } from '../../../static/svg/subtract.svg';
-import { ReactComponent as IconUK } from '../../../static/svg/uk_flag.svg';
-import { ReactComponent as IconSpain } from '../../../static/svg/spain_flag.svg';
+import { ReactComponent as IconLogo } from 'static/svg/logo.svg';
+import { ReactComponent as IconSearch } from 'static/svg/search.svg';
+import { ReactComponent as IconSubtract } from 'static/svg/subtract.svg';
+import { ReactComponent as IconUK } from 'static/svg/uk_flag.svg';
+import { ReactComponent as IconSpain } from 'static/svg/spain_flag.svg';
 
 import './styles.less';
 

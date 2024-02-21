@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Flex, Typography } from 'antd';
 import { Footer } from 'antd/es/layout/layout';
-import { ReactComponent as IconMenuCenter } from '../../../static/svg/main_menu_button.svg';
+import { ReactComponent as IconMenuCenter } from 'static/svg/main_menu_button.svg';
 import './styles.less';
 
 interface IProps {
