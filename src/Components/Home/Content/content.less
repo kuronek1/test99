@@ -1,0 +1,135 @@
+@import '../../../index.less';
+
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.depositContent {
+	flex-direction: column;
+	width: 90%;
+}
+.contentFireWrapper {
+	margin-bottom: -1px;
+	max-width: 1000px;
+	margin: auto;
+}
+.contentBox {
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 4px;
+	height: 350px;
+	width: 100%;
+	background: linear-gradient(0deg, rgba(189, 42, 42, 1) 0%, rgba(236, 205, 10, 1) 100%);
+	max-width: 1000px;
+	margin: auto;
+}
+.contentText {
+	color: #05071a;
+	font-size: 30px;
+	font-weight: 400;
+}
+.contentBoxWrapper {
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.contentSelectWrapper {
+	justify-content: center;
+	width: 100%;
+}
+.contentSelect {
+	width: 40%;
+	height: 50px;
+	margin: 0 10px;
+	border-radius: 15%;
+}
+.contentSelect div {
+	border-radius: 50px !important;
+}
+.contentButtonSubmitWrapper {
+	background-color: transparent;
+	margin: 10px 0 20px;
+	position: relative;
+	cursor: pointer;
+}
+.contentButtonSubmit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	position: relative;
+	width: 70%;
+	height: 70px;
+	margin: auto;
+	font-weight: 700;
+	text-align: center;
+	color: #05071a;
+	text-wrap: nowrap;
+}
+.contentButtonSubmit:before,
+.contentButtonSubmit:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	z-index: -2;
+	border-radius: 15px;
+	background-color: @yellow-color;
+}
+.contentButtonSubmit:before {
+	transform: skew(-10deg);
+	left: 26px;
+}
+.contentButtonSubmit:after {
+	transform: skew(10deg);
+	right: 26px;
+	left: auto;
+}
+.navBarContent {
+	width: 92%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin: 30px 0;
+	max-width: 1000px;
+	margin: auto;
+}
+.contentTickerWrapper {
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.contentTickerWave {
+	width: 100%;
+	height: 62px;
+	background-color: #131829;
+}
+.contentTickerWaveRevert {
+	transform: rotate(180deg);
+}
+.contentTickerContentWrapper {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	& svg {
+		z-index: 1;
+	}
+}
+.contentTickerFlagTextWrapper {
+	display: inline;
+	width: 70px;
+	z-index: 10;
+}
+.contentTickerFlagText {
+	color: white;
+	letter-spacing: 1.5px;
+}

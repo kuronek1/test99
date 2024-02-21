@@ -1,0 +1,125 @@
+@import '../../../index.less';
+
+.menuContainerWrapper {
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	height: 78.5vh;
+	z-index: 2;
+	* {
+		background-color: transparent;
+	}
+}
+.menuContainer {
+	position: absolute;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	width: 90%;
+	height: 100%;
+	background-color: #32333f;
+	color: white;
+}
+.menuSearchInput {
+	background-color: #232432 !important;
+	border: 0;
+	margin-top: 10px;
+	color: white;
+	& span,
+	& svg {
+		color: @yellow-color;
+	}
+}
+.menuItemsWrapper {
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	margin-top: 10px;
+	overflow: auto;
+}
+.menuItemsBackgroudSvg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.menuRegistrationWrapper {
+	width: 85%;
+	justify-content: space-around;
+	align-items: flex-start;
+	position: sticky;
+	z-index: 20;
+}
+.menuRegistrationSingUp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	font-weight: 700;
+	text-align: center;
+	color: white;
+	opacity: 0.9;
+	cursor: pointer;
+	margin: 0;
+}
+.menuRegistrationSingUp:before,
+.menuRegistrationSingUp:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	bottom: 0;
+	z-index: -2;
+	border-radius: 5px;
+	background-color: grey;
+}
+.menuRegistrationSingUp:before {
+	transform: skew(5deg);
+	left: 5px;
+}
+.menuRegistrationSingUp:after {
+	transform: skew(-10deg);
+	right: 20px;
+	left: auto;
+}
+.menuRegistrationSingIn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	position: relative;
+	width: 100%;
+	height: 50px;
+	font-weight: 700;
+	text-align: center;
+	color: black;
+	cursor: pointer;
+}
+.menuRegistrationSingIn:before,
+.menuRegistrationSingIn:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150%;
+	bottom: 0;
+	z-index: -2;
+	border-radius: 5px;
+	background-color: rgb(255, 184, 0);
+}
+.menuRegistrationSingIn:before {
+	transform: skew(-10deg);
+	left: 5px;
+}
+.menuRegistrationSingIn:after {
+	transform: skew(5deg);
+	right: 20px;
+	left: auto;
+}

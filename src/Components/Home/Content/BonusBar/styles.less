@@ -1,0 +1,57 @@
+@import '../../../../index.less';
+
+.bonusBarWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	position: relative;
+}
+.bonusBarWrapper.bonusBarWrapperOpen {
+	max-height: 1000px;
+}
+.bonusBarItem {
+	justify-content: center;
+	align-items: center;
+	align-items: center;
+	z-index: 2;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 5px;
+}
+.bonusBarItemWrapper {
+	width: 90%;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+}
+.bonusBarItemText {
+	width: 50%;
+}
+.bonusBarItemLabel {
+	color: white;
+	font-size: 10px;
+	font-weight: 700;
+}
+.bonusBarItemDesc {
+	color: @yellow-color;
+	font-size: 10px;
+	font-weight: 600;
+}
+.bonusBarItemDropdown {
+	border: 0;
+	background-color: transparent;
+	border-left: 1px solid white;
+	border-radius: 0;
+	&:hover {
+		background-color: transparent !important;
+	}
+}
+.bonusBarRadioButton {
+	border-radius: 50% !important;
+	z-index: 100;
+	&::before {
+		content: none !important;
+	}
+}
